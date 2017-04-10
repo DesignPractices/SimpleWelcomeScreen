@@ -1,0 +1,45 @@
+.container
+    @include whs(100vw,100vh)
+    @include df(row,center,center)
+    background: url("https://unsplash.it/1600/1200/?random")
+    background-size: cover
+
+    .half
+        @include whs(50%,100%)
+
+    section.left
+        background-color: rgba(#111,0.1)
+        @include df(column,center,center)
+
+        .quick
+            @include whs(100%,50%)
+            background-color: rgba(#fff,0.25)
+        .users
+            @include whs(100%,50%)
+            @include df(column,flex-end,flex-start)
+            padding: 5vh
+            ul.user-list
+                @include whs(auto,auto)
+                @include df(column,center,center)
+                list-style-type: none
+                margin: 0
+                padding: 0
+                color: #fff
+                li.user-list-item
+                    @include whs(auto,auto)
+                    @include df(row,center,center)
+                    background: transparent
+                    box-shadow: 4px 4px 8px rgba(#000,0.15)
+                    border-radius: 10px
+                    border: 2px solid rgba(#fff,0.25)
+                    padding: 5px
+                    .user-img
+                        @include whs(80px,80px)
+                        background-color: #fff
+                        border-radius: 5px
+                    .username-password
+                        @include whs(70%,auto)
+                        @include df(column,center,space-around)
+                        margin: 0 10px
+    section.right
+        background-color: rgba(#111,0.2)
